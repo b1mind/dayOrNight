@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script defer="defer" src="app.js"></script>
+    <title>Day or Night?</title>
+  </head>
+  <body class="day">
+    <header>
+      <h2>Day or Night?</h2>
+    </header>
+    <div class="wrap day" id="bg">
+      <div class="card">
+        <input id="inputTime" type="time" list="dayTimeList"/>
+        <button id="setTimeBtn">Set Time</button>
+        <datalist id="dayTimeList">
+          <option value="08:31"></option>
+          <option value="20:31"></option>
+        </datalist>
+      </div>
+      <div class="card">
+        <svg id="clock" width="344" height="851" viewBox="0 0 344 851" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="night">
+            <circle cx="172" cy="154.999" r="91" transform="rotate(180 172 154.999)" fill="#A6A6A6"></circle>
+            <g id="stars">
+              <path class="stars" d="M65 203.999L67.9187 212.982H77.3638L69.7225 218.533L72.6412 227.516L65 221.964L57.3588 227.516L60.2775 218.533L52.6363 212.982H62.0813L65 203.999Z" fill="white"></path>
+              <path class="stars" d="M284 115.999L291.633 139.492L316.336 139.492L296.351 154.012L303.985 177.506L284 162.986L264.015 177.506L271.649 154.012L251.664 139.492L276.367 139.492L284 115.999Z" fill="white"></path>
+              <path class="stars" d="M189.5 0L195.45 18.3111H214.703L199.127 29.6279L205.076 47.9389L189.5 36.6221L173.924 47.9389L179.873 29.6279L164.297 18.3111H183.55L189.5 0Z" fill="white"></path>
+              <path class="stars" d="M64.5 66.9996L70.0006 83.9287L87.8009 83.9287L73.4001 94.3914L78.9007 111.321L64.5 100.858L50.0993 111.321L55.5999 94.3914L41.1991 83.9287L58.9994 83.9287L64.5 66.9996Z" fill="white"></path>
+            </g>
+          </g>
+          <g id="day">
+            <circle cx="172" cy="678.999" r="91" transform="rotate(180 172 678.999)" fill="#FFF500"></circle>
+            <g id="rays" fill="#FFA800">
+              <path d="M172 850.999L146.885 790.249L197.115 790.249L172 850.999Z"></path>
+              <path d="M-1.26763e-06 678.999L60.75 653.884L60.75 704.114L-1.26763e-06 678.999Z"></path>
+              <path d="M172 506.999L197.115 567.749L146.885 567.749L172 506.999Z"></path>
+              <path d="M344 678.999L283.25 704.114L283.25 653.884L344 678.999Z"></path>
+              <path d="M277.359 784.358L228.841 771.358L264.359 735.84L277.359 784.358Z"></path>
+              <path d="M66.6411 784.358L79.6415 735.84L115.159 771.358L66.6411 784.358Z"></path>
+              <path d="M66.6411 573.64L115.159 586.64L79.6414 622.158L66.6411 573.64Z"></path>
+              <path d="M277.359 573.64L264.359 622.158L228.841 586.64L277.359 573.64Z"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
