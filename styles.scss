@@ -23,7 +23,7 @@ a {
 
 header {
 	padding: 2em;
-	background: #7dec8b;
+	background: #777777;
 }
 
 .wrap {
@@ -34,6 +34,10 @@ header {
 	justify-items: center;
 	align-content: center;
 	align-items: center;
+}
+
+#clock {
+	overflow: visible;
 }
 
 .night-time {

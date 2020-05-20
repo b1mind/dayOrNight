@@ -5,26 +5,31 @@ const setTimeBtn = document.getElementById('setTimeBtn')
 const inputTime = document.getElementById('inputTime')
 const clock = document.getElementById('clock')
 const day = document.getElementById('day')
-const night = document.getElementById('night')
 const sunRays = document.getElementById('rays').children
-// const stars = document.querySelectorAll('.stars')
+const night = document.getElementById('night')
 const stars = document.getElementById('stars').children
+let sunRise = '06:30'
+let sunSet = '20:30'
 let date = new Date()
 let hours = (date.getHours() < 10 ? '0' : '') + date.getHours()
 let minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes()
 let timeNow = hours + ':' + minutes
 
-const findAngle = time => {
+/* const findAngle = time => {
 	let timeSplit = time.split(':')
 	let h = timeSplit[0]
 	let m = timeSplit[1]
-	let angle = (h * 360) / 24 + (m * 360) / (24 * 60)
-	return angle
+	return (h * 360) / 24 + (m * 360) / (24 * 60)
+} */
+
+const findAngle = time => {
+	let timeSplit = time.split(':')
+	return (timeSplit[0] * 360) / 24 + (timeSplit[1] * 360) / (24 * 60)
 }
 
 //< add some animation and surf the dom
 const rotateClock = angle => {
-	gsap.to(clock, 1, { rotation: angle, transformOrigin: '50% 50%' })
+	gsap.to(clock, 1, { rotation: angle, transformOrigin: 'center' })
 }
 // todo refactor to pull CSS or give the tween a color var || ? dynamic timeline ?
 // todo add more color changes & animations || ? dynamic timeline ?
@@ -46,7 +51,7 @@ const nightTime = time => {
 
 const setTime = (e = timeNow) => {
 	time = e
-	time <= '20:30' && time >= '06:30' ? dayTime(time) : nightTime(time)
+	time <= sunSet && time >= sunRise ? dayTime(time) : nightTime(time)
 	let angle = findAngle(time)
 	rotateClock(angle)
 }
