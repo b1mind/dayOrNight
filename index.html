@@ -14,16 +14,17 @@
       <h2>Day or Night?</h2>
     </header>
     <div class="wrap day" id="bg">
-      <div class="card">
+      <h3>Current Time</h3>
+      <div class="card--Input overlap">
         <input id="inputTime" type="time" list="dayTimeList"/>
-        <button id="setTimeBtn">Set Time</button>
+        <button class="btn" id="setTimeBtn">Set New Time</button>
         <datalist id="dayTimeList">
           <option value="08:31"></option>
           <option value="20:31"></option>
         </datalist>
       </div>
       <!-- todo horizon with over flow hidden?-->
-      <div class="card">
+      <div class="card overlap">
         <svg id="clock" viewBox="0 0 344 851" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="night">
             <circle cx="172" cy="154.999" r="91" transform="rotate(180 172 154.999)" fill="#A6A6A6"></circle>

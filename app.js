@@ -15,13 +15,6 @@ let hours = (date.getHours() < 10 ? '0' : '') + date.getHours()
 let minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes()
 let timeNow = hours + ':' + minutes
 
-/* const findAngle = time => {
-	let timeSplit = time.split(':')
-	let h = timeSplit[0]
-	let m = timeSplit[1]
-	return (h * 360) / 24 + (m * 360) / (24 * 60)
-} */
-
 const findAngle = time => {
 	let timeSplit = time.split(':')
 	return (timeSplit[0] * 360) / 24 + (timeSplit[1] * 360) / (24 * 60)

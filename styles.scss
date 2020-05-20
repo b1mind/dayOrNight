@@ -27,15 +27,32 @@ header {
 }
 
 .wrap {
-	min-height: 100%;
-	padding: 2em;
+	height: 100%;
 	display: grid;
-	gap: 2em;
 	justify-content: center;
 	justify-items: center;
 	align-content: center;
 	align-items: center;
 	overflow: hidden;
+}
+
+.overlap {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	/* 	@media (max-width: 420px) {
+		grid-column: auto;
+		grid-row: auto;
+	} */
+}
+
+.card--Input {
+	text-align: center;
+	z-index: 420;
+}
+
+.btn {
+	width: 100%;
+	display: block;
 }
 
 #clock {
@@ -51,9 +68,11 @@ header {
 }
 
 .night-time {
+	color: rgb(63, 106, 245);
 	background-color: #031758;
 }
 
 .day {
+	color: #031758;
 	background-color: rgb(63, 106, 245);
 }

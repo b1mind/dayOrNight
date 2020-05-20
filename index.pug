@@ -13,14 +13,16 @@ html(lang="en")
     header
       h2 Day or Night?
     .wrap#bg.day
-      .card
+      h3 Current Time
+      
+      .card--Input.overlap
         input#inputTime(type="time" list="dayTimeList")
-        button#setTimeBtn Set Time
+        button#setTimeBtn.btn Set New Time
         datalist#dayTimeList
           option(value="08:31")
           option(value="20:31")
       // todo horizon with over flow hidden?
-      .card
+      .card.overlap
         svg#clock(viewBox='0 0 344 851', fill='none', xmlns='http://www.w3.org/2000/svg')
           g#night
             circle(cx='172', cy='154.999', r='91', transform='rotate(180 172 154.999)', fill='#A6A6A6')

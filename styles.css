@@ -27,11 +27,9 @@ header {
 }
 
 .wrap {
-  min-height: 100%;
-  padding: 2em;
+  height: 100%;
   display: -ms-grid;
   display: grid;
-  gap: 2em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -42,6 +40,29 @@ header {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+}
+
+.overlap {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  /* 	@media (max-width: 420px) {
+		grid-column: auto;
+		grid-row: auto;
+	} */
+}
+
+.card--Input {
+  text-align: center;
+  z-index: 420;
+}
+
+.btn {
+  width: 100%;
+  display: block;
 }
 
 #clock {
@@ -63,9 +84,11 @@ header {
 }
 
 .night-time {
+  color: #3f6af5;
   background-color: #031758;
 }
 
 .day {
+  color: #031758;
   background-color: #3f6af5;
 }
