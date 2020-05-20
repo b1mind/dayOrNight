@@ -9,7 +9,7 @@ const sunRays = document.getElementById('rays').children
 const night = document.getElementById('night')
 const stars = document.getElementById('stars').children
 let sunRise = '06:30'
-let sunSet = '20:30'
+let sunSet = '19:30'
 let date = new Date()
 let hours = (date.getHours() < 10 ? '0' : '') + date.getHours()
 let minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes()
@@ -32,7 +32,7 @@ const rotateClock = angle => {
 	gsap.to(clock, 1, { rotation: angle, transformOrigin: 'center' })
 }
 // todo refactor to pull CSS or give the tween a color var || ? dynamic timeline ?
-// todo add more color changes & animations || ? dynamic timeline ?
+// todo add more color changes & animations
 const dayTime = time => {
 	bg.classList.replace('night-time', 'day')
 	console.log(`do other day stuff its ${time}`)

@@ -27,6 +27,7 @@ header {
 }
 
 .wrap {
+	min-height: 100%;
 	padding: 2em;
 	display: grid;
 	gap: 2em;
@@ -34,10 +35,19 @@ header {
 	justify-items: center;
 	align-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 #clock {
+	width: auto;
+	height: 851px;
 	overflow: visible;
+	@media (max-width: 900px) {
+		height: 660px;
+	}
+	@media (max-width: 420px) {
+		height: 380px;
+	}
 }
 
 .night-time {

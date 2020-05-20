@@ -9,7 +9,7 @@ html(lang="en")
     script(defer src="app.js")
     title Day or Night?
 
-  body.day
+  body
     header
       h2 Day or Night?
     .wrap#bg.day
@@ -21,7 +21,7 @@ html(lang="en")
           option(value="20:31")
       // todo horizon with over flow hidden?
       .card
-        svg#clock(width='344', height='851', viewBox='0 0 344 851', fill='none', xmlns='http://www.w3.org/2000/svg')
+        svg#clock(viewBox='0 0 344 851', fill='none', xmlns='http://www.w3.org/2000/svg')
           g#night
             circle(cx='172', cy='154.999', r='91', transform='rotate(180 172 154.999)', fill='#A6A6A6')
             g#stars
